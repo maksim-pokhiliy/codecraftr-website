@@ -2,7 +2,6 @@ import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
 import typescriptEslint from "@typescript-eslint/eslint-plugin";
 import typescriptParser from "@typescript-eslint/parser";
-import importPlugin from "eslint-plugin-import";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 import reactHooks from "eslint-plugin-react-hooks";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
@@ -37,7 +36,6 @@ const eslintConfig = [
     },
     plugins: {
       "@typescript-eslint": typescriptEslint,
-      import: importPlugin,
       "jsx-a11y": jsxA11y,
       "react-hooks": reactHooks,
       "simple-import-sort": simpleImportSort,
