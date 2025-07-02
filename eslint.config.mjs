@@ -4,7 +4,6 @@ import typescriptEslint from "@typescript-eslint/eslint-plugin";
 import typescriptParser from "@typescript-eslint/parser";
 import importPlugin from "eslint-plugin-import";
 import jsxA11y from "eslint-plugin-jsx-a11y";
-import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
 import unusedImports from "eslint-plugin-unused-imports";
@@ -37,7 +36,6 @@ const eslintConfig = [
       },
     },
     plugins: {
-      react,
       "@typescript-eslint": typescriptEslint,
       import: importPlugin,
       "jsx-a11y": jsxA11y,
