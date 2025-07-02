@@ -1,0 +1,15 @@
+"use client";
+
+export const ANIMATION_CONFIG = {
+  SCROLL_THRESHOLD: 100,
+  INTERSECTION_THRESHOLD: 0.3,
+  CURSOR_BLINK_INTERVAL: 500,
+  TYPE_SPEED: 50,
+  PAUSE_AFTER_COMMAND: 800,
+} as const;
+
+export const TRANSITION_DURATIONS = {
+  SHORT: 200,
+  MEDIUM: 300,
+  LONG: 500,
+} as const;

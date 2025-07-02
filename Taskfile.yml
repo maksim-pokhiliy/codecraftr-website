@@ -1,0 +1,120 @@
+version: "3"
+
+vars:
+  PACKAGE_MANAGER: pnpm
+
+tasks:
+  # Development tasks
+  dev:
+    desc: Start development server
+    cmd: "{{.PACKAGE_MANAGER}} dev"
+
+  build:
+    desc: Build production bundle
+    cmd: "{{.PACKAGE_MANAGER}} build"
+
+  start:
+    desc: Start production server
+    cmd: "{{.PACKAGE_MANAGER}} start"
+
+  # Code quality tasks
+  lint:
+    desc: Run ESLint
+    cmd: "{{.PACKAGE_MANAGER}} lint"
+
+  lint:fix:
+    desc: Run ESLint with fix
+    cmd: "{{.PACKAGE_MANAGER}} lint:fix"
+
+  format:
+    desc: Format code with Prettier
+    cmd: "{{.PACKAGE_MANAGER}} format"
+
+  format:check:
+    desc: Check code formatting
+    cmd: "{{.PACKAGE_MANAGER}} format:check"
+
+  type-check:
+    desc: Run TypeScript type checking (quick)
+    cmd: npx tsc --noEmit --skipLibCheck
+
+  type-check:full:
+    desc: Run full TypeScript type checking (only after build)
+    cmd: npx tsc --noEmit --skipLibCheck
+
+  # Testing tasks
+  test:
+    desc: Run tests
+    cmd: "{{.PACKAGE_MANAGER}} test"
+
+  test:watch:
+    desc: Run tests in watch mode
+    cmd: "{{.PACKAGE_MANAGER}} test -- --watch"
+
+  # Quality checks
+  check:
+    desc: Run quick quality checks (for development)
+    deps: [lint, type-check, format:check]
+
+  check:full:
+    desc: Run all quality checks (safe version)
+    deps: [lint, type-check, format:check]
+
+  check:build:
+    desc: Run checks and build (for deployment)
+    cmds:
+      - task: check
+      - task: build
+
+  # Git hooks
+  install-hooks:
+    desc: Install git hooks
+    cmd: npx lefthook install
+
+  # Maintenance tasks
+  clean:
+    desc: Clean build artifacts and dependencies
+    cmds:
+      - rm -rf .next
+      - rm -rf out
+      - rm -rf dist
+      - rm -rf node_modules/.cache
+    silent: true
+
+  clean:all:
+    desc: Clean everything including node_modules
+    cmds:
+      - task: clean
+      - rm -rf node_modules
+      - "{{.PACKAGE_MANAGER}} store prune"
+    silent: true
+
+  deps:
+    desc: Install dependencies
+    cmd: "{{.PACKAGE_MANAGER}} install"
+
+  deps:update:
+    desc: Update dependencies
+    cmd: "{{.PACKAGE_MANAGER}} update"
+
+  # Deployment prep
+  deploy:check:
+    desc: Pre-deployment checks
+    deps: [check:build]
+
+  # Development workflow
+  fresh:
+    desc: Fresh start - clean and reinstall
+    cmds:
+      - task: clean:all
+      - task: deps
+      - task: install-hooks
+
+  # Info tasks
+  info:
+    desc: Show project info
+    cmd: |
+      echo "Project: codecraftr-website"
+      echo "Node: $(node --version)"
+      echo "pnpm: $(pnpm --version)"
+      echo "Next.js: $(npx next --version)"
