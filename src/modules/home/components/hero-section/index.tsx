@@ -90,8 +90,8 @@ export function HeroSection() {
         </Stack>
 
         <Stack
-          spacing={8}
-          direction="row"
+          spacing={{ xs: 4, sm: 8 }}
+          direction={{ sm: "row" }}
           sx={{
             justifyContent: "center",
             flexWrap: "wrap",
@@ -99,11 +99,11 @@ export function HeroSection() {
         >
           {stats.map((stat) => (
             <Box key={stat.stat} sx={{ textAlign: "center" }}>
-              <Typography variant="h4" sx={{ color: "primary.main", fontWeight: 800 }}>
+              <Typography variant="h3" sx={{ color: "primary.main", fontWeight: 800 }}>
                 {stat.stat}
               </Typography>
 
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body1" color="text.secondary">
                 {stat.text}
               </Typography>
             </Box>

@@ -34,7 +34,7 @@ const stats = [
 
 export function FounderStorySection() {
   return (
-    <ContentSection backgroundColor="default" spacing="large">
+    <ContentSection backgroundColor="default">
       <SectionHeader
         highlightedText="Founder"
         title="Story"
