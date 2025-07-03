@@ -1,11 +1,10 @@
 "use client";
 
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 
 import { ContentSection } from "@app/shared/components/ui/content-section";
 import { FloatingShape } from "@app/shared/components/ui/floating-shape";
 import { SectionHeader } from "@app/shared/components/ui/section-header";
-import { lineHeights } from "@app/shared/theme/common";
 import { ColorVariant, GradientVariant, ShapeVariant, Size } from "@app/shared/types";
 
 import { saasBusinessChallenges } from "../../data/saas-business";
@@ -29,36 +28,6 @@ export function SaaSBusinessSection() {
           </Grid>
         ))}
       </Grid>
-
-      <Box sx={({ spacing }) => ({ textAlign: "center", mt: spacing(8) })}>
-        <Typography
-          variant="h5"
-          sx={({ spacing }) => ({
-            fontWeight: 600,
-            mb: spacing(2),
-          })}
-        >
-          Ready to Build Your SaaS Platform?
-        </Typography>
-
-        <Typography
-          variant="body1"
-          color="text.secondary"
-          sx={({ spacing }) => ({
-            maxWidth: 600,
-            mx: "auto",
-            lineHeight: lineHeights.relaxed,
-            mb: spacing(4),
-          })}
-        >
-          Let&apos;s discuss your SaaS vision and how we can help you build a platform that scales
-          with your business from day one.
-        </Typography>
-
-        <Button variant="contained" size="large" sx={{ fontWeight: 600 }}>
-          Schedule Discovery Call
-        </Button>
-      </Box>
 
       <FloatingShape
         variant={ShapeVariant.CIRCLE}
