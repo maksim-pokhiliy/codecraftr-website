@@ -1,11 +1,13 @@
+// src/shared/theme/components/card.ts
 "use client";
 
-import { Components, Theme } from "@mui/material";
+import { alpha, Components, Theme } from "@mui/material";
 
 declare module "@mui/material/Paper" {
   interface PaperPropsVariantOverrides {
     dashed: true;
     featured: true;
+    info: true;
   }
 }
 
@@ -14,11 +16,6 @@ export const card: Components<Theme>["MuiCard"] = {
     root: ({ theme }) => ({
       borderRadius: theme.spacing(2),
       padding: theme.spacing(3),
-      ...theme.mixins.hoverTransform.medium,
-      "&:hover": {
-        ...theme.mixins.hoverTransform.medium["&:hover"],
-        boxShadow: theme.shadows[8],
-      },
       [theme.breakpoints.down("md")]: {
         padding: theme.spacing(2),
       },
@@ -32,9 +29,6 @@ export const card: Components<Theme>["MuiCard"] = {
         borderWidth: theme.spacing(0.25),
         borderStyle: "solid",
         borderColor: theme.palette.grey[300],
-        "&:hover": {
-          borderColor: theme.palette.grey[400],
-        },
       }),
     },
     {
@@ -43,10 +37,6 @@ export const card: Components<Theme>["MuiCard"] = {
         borderWidth: theme.spacing(0.25),
         borderStyle: "dashed",
         borderColor: theme.palette.grey[300],
-        "&:hover": {
-          borderStyle: "solid",
-          borderColor: theme.palette.grey[400],
-        },
       }),
     },
     {
@@ -55,10 +45,15 @@ export const card: Components<Theme>["MuiCard"] = {
         borderWidth: theme.spacing(0.25),
         borderStyle: "dashed",
         borderColor: theme.palette.primary.main,
-        "&:hover": {
-          borderStyle: "solid",
-          borderColor: theme.palette.primary.main,
-        },
+      }),
+    },
+    {
+      props: { variant: "info" },
+      style: ({ theme }) => ({
+        background: alpha(theme.palette.secondary.main, 0.15),
+        borderWidth: theme.spacing(0.25),
+        borderStyle: "dashed",
+        borderColor: theme.palette.secondary.main,
       }),
     },
   ],

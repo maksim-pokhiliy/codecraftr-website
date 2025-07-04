@@ -15,7 +15,7 @@ export function BusinessChallengeCard({ challenge }: BusinessChallengeCardProps)
 
   return (
     <Card
-      variant="outlined"
+      variant="dashed"
       sx={{
         height: "100%",
       }}

@@ -1,6 +1,6 @@
 "use client";
 
-import { alpha, Box, Grid, Stack, Typography } from "@mui/material";
+import { Box, Card, Grid, Stack, Typography } from "@mui/material";
 
 import { ContentSection } from "@app/shared/components/ui/content-section";
 import { FloatingShape } from "@app/shared/components/ui/floating-shape";
@@ -74,14 +74,7 @@ export function FounderStorySection() {
         </Grid>
 
         <Grid size={{ xs: 12, md: 4 }}>
-          <Box
-            sx={({ palette }) => ({
-              p: 4,
-              borderRadius: 2,
-              background: `linear-gradient(135deg, ${alpha(palette.primary.main, 0.08)} 0%, ${alpha(palette.warning.main, 0.05)} 100%)`,
-              border: `1px solid ${alpha(palette.primary.main, 0.15)}`,
-            })}
-          >
+          <Card variant="featured">
             {stats.map((stat) => (
               <Stack key={stat.stat} spacing={1}>
                 <Typography
@@ -103,7 +96,7 @@ export function FounderStorySection() {
                 </Typography>
               </Stack>
             ))}
-          </Box>
+          </Card>
         </Grid>
       </Grid>
 
