@@ -4,13 +4,10 @@ import { createTheme } from "@mui/material/styles";
 
 import "@app/shared/types/mui-extensions";
 
-import { shape, spacing } from "./common";
-import * as components from "./components";
-import { createMixins } from "./mixins";
+import { components } from "./components";
 import { palette } from "./palette";
 import { typography } from "./typography";
-
-export { gradients } from "./gradients";
+import { createMixins, shape, spacing, textShadows } from "./utils";
 
 const baseTheme = createTheme({
   palette,
@@ -18,6 +15,7 @@ const baseTheme = createTheme({
   shape,
   typography,
   components,
+  textShadows,
 });
 
 export const theme = createTheme(baseTheme, {

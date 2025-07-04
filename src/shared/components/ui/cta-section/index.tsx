@@ -1,140 +1,72 @@
 "use client";
 
-import { Box, Button, Typography, useTheme } from "@mui/material";
+import { Button, Container, Stack, Typography } from "@mui/material";
 
-import { ContentSection } from "@app/shared/components/ui/content-section";
-import { FloatingShape } from "@app/shared/components/ui/floating-shape";
-import { GradientText } from "@app/shared/components/ui/gradient-text";
-import { lineHeights } from "@app/shared/theme/common";
-import { gradients } from "@app/shared/theme/gradients";
-import { ColorVariant, GradientVariant, ShapeVariant, Size } from "@app/shared/types";
+import { gradients, lineHeights } from "../../../theme/utils";
 
 interface CTASectionProps {
   title?: string;
   subtitle?: string;
   ctaText?: string;
-  variant?: "primary" | "secondary";
-  backgroundColor?: "default" | "paper" | "primary";
+  ctaHref?: string;
+  backgroundColor?: "primary" | "secondary";
 }
 
 export function CTASection({
   title = "Ready to Build Your SaaS Platform?",
   subtitle = "Let's discuss your vision and create a platform that scales with your business from day one.",
   ctaText = "Schedule Discovery Call",
-  variant = "primary",
-  backgroundColor = "default",
+  ctaHref = "#",
+  backgroundColor = "primary",
 }: CTASectionProps) {
-  const theme = useTheme();
-
-  const isPrimaryBackground = backgroundColor === "primary";
-
-  const getBackground = () => {
-    if (isPrimaryBackground) {
-      return theme.palette.background.paper;
-    }
-
-    return variant === "primary"
-      ? gradients.background.primary(theme, 135)
-      : gradients.background.secondary(theme, 135);
-  };
-
-  const getShapeColor = (isFirst: boolean) => {
-    if (isPrimaryBackground) {
-      return isFirst ? ColorVariant.PRIMARY : ColorVariant.SECONDARY;
-    }
-
-    if (variant === "primary") {
-      return isFirst ? ColorVariant.SECONDARY : ColorVariant.PRIMARY;
-    }
-
-    return isFirst ? ColorVariant.PRIMARY : ColorVariant.SECONDARY;
-  };
-
-  const shouldUseGradientText = variant === "primary" && !isPrimaryBackground;
-
   return (
-    <ContentSection backgroundColor={backgroundColor} spacing="large">
-      <Box
-        sx={({ spacing }) => ({
-          textAlign: "center",
-          position: "relative",
-          py: spacing(8),
-          px: spacing(3),
-          borderRadius: spacing(3),
-          background: getBackground(),
-          overflow: "hidden",
-        })}
-      >
-        <Typography
-          variant="h3"
-          sx={({ spacing }) => ({
-            fontWeight: 800,
-            mb: spacing(3),
-            lineHeight: lineHeights.snug,
-            color: isPrimaryBackground ? "text.primary" : "inherit",
-          })}
-        >
-          {shouldUseGradientText ? (
-            <GradientText variant={GradientVariant.PRIMARY}>{title}</GradientText>
-          ) : (
-            title
-          )}
-        </Typography>
-
-        <Typography
-          variant="h6"
-          sx={({ spacing }) => ({
-            maxWidth: 700,
-            mx: "auto",
-            lineHeight: lineHeights.relaxed,
-            fontWeight: 400,
-            mb: spacing(5),
-            color: isPrimaryBackground ? "text.secondary" : "text.secondary",
-          })}
-        >
-          {subtitle}
-        </Typography>
-
-        <Button
-          variant="contained"
-          size="large"
+    <Stack
+      component="section"
+      sx={({ spacing }) => ({
+        py: spacing(12),
+        background: gradients.cta[backgroundColor],
+        color: "common.white",
+        textAlign: "center",
+      })}
+    >
+      <Container maxWidth="lg">
+        <Stack
+          spacing={6}
           sx={{
-            fontWeight: 700,
-            px: 6,
-            py: 2,
-            fontSize: theme.typography.h6.fontSize,
-            boxShadow: theme.shadows[8],
-            ...(isPrimaryBackground && {
-              backgroundColor: "primary.main",
-              color: "white",
-              "&:hover": {
-                backgroundColor: "primary.dark",
-              },
-            }),
-            "&:hover": {
-              boxShadow: theme.shadows[12],
-            },
+            alignItems: "center",
           }}
         >
-          {ctaText}
-        </Button>
+          <Stack spacing={3} sx={{ maxWidth: 700 }}>
+            <Typography
+              variant="h2"
+              component="h2"
+              sx={({ textShadows }) => ({
+                fontWeight: 800,
+                textShadow: textShadows[2],
+                lineHeight: lineHeights.tight,
+              })}
+            >
+              {title}
+            </Typography>
 
-        <FloatingShape
-          variant={ShapeVariant.CIRCLE}
-          size={Size.SMALL}
-          position={{ top: "10%", right: "15%" }}
-          color={getShapeColor(true)}
-          rotation={30}
-        />
+            <Typography
+              variant="h6"
+              sx={({ textShadows }) => ({
+                opacity: 0.95,
+                lineHeight: lineHeights.relaxed,
+                textShadow: textShadows[1],
+                fontWeight: 400,
+              })}
+            >
+              {subtitle}
+            </Typography>
+          </Stack>
 
-        <FloatingShape
-          variant={ShapeVariant.BLOB}
-          size={Size.MEDIUM}
-          position={{ bottom: "15%", left: "10%" }}
-          color={getShapeColor(false)}
-          reverse
-        />
-      </Box>
-    </ContentSection>
+          <Button variant="cta" size="large" href={ctaHref}>
+            {ctaText}
+          </Button>
+        </Stack>
+      </Container>
+    </Stack>
   );
 }

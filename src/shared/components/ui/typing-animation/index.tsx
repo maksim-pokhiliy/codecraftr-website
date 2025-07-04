@@ -4,7 +4,7 @@ import { Box, Stack, Typography, useTheme } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 
 import { ANIMATION_CONFIG } from "@app/shared/constants/animations";
-import { lineHeights } from "@app/shared/theme/common";
+import { lineHeights } from "@app/shared/theme/utils/common";
 
 interface Command {
   text: string;

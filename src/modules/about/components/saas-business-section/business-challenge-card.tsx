@@ -2,7 +2,7 @@
 
 import { Box, Card, Stack, Typography } from "@mui/material";
 
-import { lineHeights } from "@app/shared/theme/common";
+import { lineHeights } from "@app/shared/theme/utils/common";
 
 import { SaaSBusinessChallenge } from "../../data/saas-business";
 

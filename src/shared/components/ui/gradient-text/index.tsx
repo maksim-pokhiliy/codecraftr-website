@@ -3,7 +3,7 @@
 import { Box, useTheme } from "@mui/material";
 import { ReactNode } from "react";
 
-import { gradients } from "@app/shared/theme/gradients";
+import { gradients } from "@app/shared/theme/utils/gradients";
 import { GradientVariant } from "@app/shared/types";
 
 interface GradientTextProps {

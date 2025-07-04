@@ -2,7 +2,7 @@
 
 import { ThemeOptions } from "@mui/material";
 
-import { lineHeights } from "./common";
+import { lineHeights } from "./utils/common";
 
 export const typography: ThemeOptions["typography"] = {
   fontFamily:
