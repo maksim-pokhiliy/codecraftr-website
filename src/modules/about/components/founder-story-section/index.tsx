@@ -5,7 +5,7 @@ import { alpha, Box, Grid, Stack, Typography } from "@mui/material";
 import { ContentSection } from "@app/shared/components/ui/content-section";
 import { FloatingShape } from "@app/shared/components/ui/floating-shape";
 import { SectionHeader } from "@app/shared/components/ui/section-header";
-import { lineHeights } from "@app/shared/theme/common";
+import { lineHeights } from "@app/shared/theme/utils/common";
 import { ColorVariant, GradientVariant, ShapeVariant, Size } from "@app/shared/types";
 
 const paragraphs = [

@@ -2,8 +2,8 @@
 
 import { Box, useTheme } from "@mui/material";
 
-import { createAnimations } from "@app/shared/theme/animations";
-import { gradients } from "@app/shared/theme/gradients";
+import { createAnimations } from "@app/shared/theme/utils/animations";
+import { gradients } from "@app/shared/theme/utils/gradients";
 import { ColorVariant, ShapeVariant, Size } from "@app/shared/types";
 import { getResponsiveSize } from "@app/shared/utils/theme-utils";
 

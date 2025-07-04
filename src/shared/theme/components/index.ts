@@ -1,5 +1,7 @@
 "use client";
 
-export { button as MuiButton } from "./button";
-export { card as MuiCard } from "./card";
-export { typography as MuiTypography } from "./typography";
+import { button as MuiButton } from "./button";
+import { card as MuiCard } from "./card";
+import { typography as MuiTypography } from "./typography";
+
+export const components = { MuiButton, MuiCard, MuiTypography };
