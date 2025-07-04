@@ -21,7 +21,6 @@ export const accordion: Components<Theme>["MuiAccordion"] = {
         margin: `0 0 ${theme.spacing(3)} 0`,
         borderColor: theme.palette.secondary.main,
         backgroundColor: alpha(theme.palette.secondary.main, 0.02),
-        boxShadow: theme.shadows[8],
       },
       "&:first-of-type, &:last-of-type": {
         borderRadius: theme.spacing(2),

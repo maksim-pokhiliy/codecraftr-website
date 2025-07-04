@@ -4,6 +4,7 @@ import { Stack } from "@mui/material";
 
 import { CTASection } from "@app/shared/components/ui/cta-section";
 
+import { DevelopmentProcessSection } from "./components/development-process-section";
 import { HowToGetStartedSection } from "./components/how-to-get-started-section";
 import { ServicePackagesSection } from "./components/service-packages-section";
 
@@ -12,6 +13,7 @@ export function ServicesPage() {
     <Stack>
       <ServicePackagesSection />
       <HowToGetStartedSection />
+      <DevelopmentProcessSection />
 
       <CTASection
         title="Ready to Start Your Project?"
