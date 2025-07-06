@@ -82,6 +82,7 @@ export function TechnologyCard({ technology }: TechnologyCardProps) {
           vertical: "top",
           horizontal: "center",
         }}
+        sx={{ pointerEvents: "none" }}
       >
         <Stack>
           <Typography
