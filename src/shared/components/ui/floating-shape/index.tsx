@@ -68,6 +68,7 @@ export function FloatingShape({
         transform: `rotate(${rotation}deg)`,
         ...(reverse ? animations.floatReverse : animations.float),
         zIndex: 0,
+        pointerEvents: "none",
       }}
     />
   );
