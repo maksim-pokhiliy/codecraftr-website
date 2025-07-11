@@ -3,67 +3,75 @@
 import { ThemeOptions } from "@mui/material";
 
 export const palette: ThemeOptions["palette"] = {
+  mode: "dark",
+
   primary: {
-    main: "#ff6b35",
-    dark: "#e55a2b",
-    light: "#ff8a65",
+    main: "#0b5cff",
+    dark: "#004bee",
+    light: "#7ea7f8",
     contrastText: "#ffffff",
   },
 
   secondary: {
-    main: "#004e89",
-    dark: "#003d6b",
-    light: "#1976d2",
+    main: "#1c1f1f",
+    dark: "#141616",
+    light: "#becfcf",
     contrastText: "#ffffff",
   },
 
   text: {
-    primary: "#0f172a",
-    secondary: "#475569",
-    disabled: "#94a3b8",
+    primary: "#ffffff", // БЕЛЫЙ текст
+    secondary: "#becfcf", // светло-серый
+    disabled: "#7e8888",
   },
 
   background: {
-    default: "#ffffff",
-    paper: "#f8fafc",
+    default: "#000000", // ТЕМНЫЙ фон
+    paper: "#1a1a1a", // еще темнее для карточек
   },
 
   success: {
-    main: "#10b981",
+    main: "#d6ff79",
+    dark: "#b8e358",
+    light: "#d6ff79",
+    contrastText: "#1c1f1f",
   },
 
   warning: {
     main: "#ffa726",
+    contrastText: "#ffffff",
   },
 
   error: {
-    main: "#ef4444",
+    main: "#0b5cff",
+    contrastText: "#ffffff",
   },
 
   info: {
-    main: "#06b6d4",
+    main: "#7ea7f8",
+    contrastText: "#ffffff",
   },
 
   grey: {
-    50: "#f8fafc",
-    100: "#f1f5f9",
-    200: "#e2e8f0",
-    300: "#cbd5e1",
-    400: "#94a3b8",
-    500: "#64748b",
-    600: "#475569",
-    700: "#334155",
-    800: "#1e293b",
-    900: "#0f172a",
+    50: "#fdfdfd",
+    100: "#f2f6f6",
+    200: "#dee7e7",
+    300: "#e3e8e8",
+    400: "#becfcf",
+    500: "#7e8888",
+    600: "#606262",
+    700: "#3e3e3e",
+    800: "#1c1f1f",
+    900: "#262929",
   },
 
-  divider: "#e2e8f0",
+  divider: "#3e3e3e",
 
   action: {
-    hover: "rgba(0, 0, 0, 0.04)",
-    selected: "rgba(0, 0, 0, 0.08)",
-    disabled: "rgba(0, 0, 0, 0.26)",
-    disabledBackground: "rgba(0, 0, 0, 0.12)",
-    focus: "rgba(0, 0, 0, 0.12)",
+    hover: "rgba(11, 92, 255, 0.08)",
+    selected: "rgba(11, 92, 255, 0.12)",
+    disabled: "rgba(190, 207, 207, 0.26)",
+    disabledBackground: "rgba(190, 207, 207, 0.12)",
+    focus: "rgba(11, 92, 255, 0.12)",
   },
 };

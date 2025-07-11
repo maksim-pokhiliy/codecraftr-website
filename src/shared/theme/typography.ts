@@ -2,76 +2,76 @@
 
 import { ThemeOptions } from "@mui/material";
 
-import { lineHeights } from "./utils/common";
-
 export const typography: ThemeOptions["typography"] = {
   fontFamily:
     'var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
 
-  fontFamilyMonospace: 'Monaco, Consolas, "Courier New", monospace',
-
   h1: {
-    fontWeight: 700,
-    lineHeight: lineHeights.tight,
+    fontWeight: 600,
+    lineHeight: 1.2,
+    letterSpacing: "-0.02em",
   },
 
   h2: {
     fontWeight: 600,
-    lineHeight: lineHeights.snug,
+    lineHeight: 1.3,
+    letterSpacing: "-0.01em",
   },
 
   h3: {
     fontWeight: 600,
-    lineHeight: lineHeights.snug,
+    lineHeight: 1.3,
   },
 
   h4: {
     fontWeight: 600,
-    lineHeight: lineHeights.snug,
+    lineHeight: 1.4,
   },
 
   h5: {
     fontWeight: 600,
-    lineHeight: lineHeights.snug,
+    lineHeight: 1.4,
   },
 
   h6: {
     fontWeight: 600,
-    lineHeight: lineHeights.snug,
+    lineHeight: 1.5,
   },
 
   subtitle1: {
     fontWeight: 400,
-    lineHeight: lineHeights.normal,
+    lineHeight: 1.5,
   },
 
   subtitle2: {
     fontWeight: 500,
-    lineHeight: lineHeights.normal,
+    lineHeight: 1.5,
   },
 
   body1: {
     fontWeight: 400,
-    lineHeight: lineHeights.normal,
+    lineHeight: 1.6,
   },
 
   body2: {
     fontWeight: 400,
-    lineHeight: lineHeights.normal,
+    lineHeight: 1.5,
   },
 
   button: {
     fontWeight: 500,
     textTransform: "none",
+    letterSpacing: "0.01em",
   },
 
   caption: {
     fontWeight: 400,
-    lineHeight: lineHeights.normal,
+    lineHeight: 1.4,
   },
 
   overline: {
     fontWeight: 500,
     textTransform: "uppercase",
+    letterSpacing: "0.1em",
   },
 };
