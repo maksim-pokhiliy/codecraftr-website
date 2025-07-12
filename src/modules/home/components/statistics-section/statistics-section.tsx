@@ -31,10 +31,10 @@ const statistics: Statistic[] = [
 export function StatisticsSection() {
   return (
     <Section title="Codecraftr by the" highlighted="numbers." variant="paper">
-      <Grid container spacing={4}>
+      <Grid container spacing={{ xs: 4, md: 0 }}>
         {statistics.map((stat, index) => (
           <Grid key={index} size={{ xs: 12, sm: 6, md: 12 / statistics.length }}>
-            <Stack spacing={1} sx={{}}>
+            <Stack>
               <Typography
                 variant="h2"
                 component="span"
