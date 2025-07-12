@@ -1,6 +1,6 @@
 "use client";
 
-import { Stack, Typography } from "@mui/material";
+import { Grid, Stack, Typography } from "@mui/material";
 import { TypeAnimation } from "react-type-animation";
 
 import { FullscreenSection } from "@app/shared/components/ui/fullscreen-section";
@@ -70,29 +70,29 @@ export function HeroSection() {
   return (
     <FullscreenSection>
       <Stack spacing={8}>
-        <Stack spacing={3}>
-          <Typography variant="overline" color="text.secondary">
+        <Stack>
+          <Typography variant="overline" color="primary">
             SaaS development agency
           </Typography>
 
-          <Typography variant="h1" component="h1">
+          <Typography variant="h2" component="h1">
             Strong partner for building scalable SaaS platforms with
             <br />
             enterprise-ready{" "}
             <Typography
               component="span"
-              variant="h1"
+              variant="h2"
               sx={{ color: "primary.main", fontWeight: 700 }}
             >
               <TypeAnimation
                 sequence={[
-                  "architecture",
+                  "architecture.",
                   2000,
-                  "solutions",
+                  "solutions.",
                   2000,
-                  "expertise",
+                  "expertise.",
                   2000,
-                  "results",
+                  "results.",
                   2000,
                 ]}
                 wrapper="span"
@@ -103,15 +103,20 @@ export function HeroSection() {
           </Typography>
         </Stack>
 
-        <Stack
-          direction={{ lg: "row" }}
-          spacing={{ sm: 4 }}
-          sx={{ width: "100%", justifyContent: "center", alignItems: "stretch" }}
-        >
+        <Grid container spacing={4}>
           {services.map((service) => (
-            <ServiceCard service={service} key={service.id} />
+            <Grid
+              key={service.id}
+              size={{ xs: 12, sm: 6, xl: 3 }}
+              sx={{
+                alignItems: "stretch",
+                display: "flex",
+              }}
+            >
+              <ServiceCard service={service} />
+            </Grid>
           ))}
-        </Stack>
+        </Grid>
       </Stack>
     </FullscreenSection>
   );
