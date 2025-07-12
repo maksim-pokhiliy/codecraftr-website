@@ -39,13 +39,13 @@ export function ServiceCard({ service }: ServiceCardProps) {
     >
       <Stack spacing={2} sx={{ height: "100%", justifyContent: "space-between" }}>
         <Stack spacing={1}>
-          <Typography variant="h3">{service.title}</Typography>
+          <Typography variant="h4">{service.title}</Typography>
 
           <Typography
             variant="overline"
             sx={(theme) => ({
               fontWeight: 500,
-              opacity: { xs: 0.4, lg: isHovered ? 0.4 : 0 },
+              opacity: { xs: 0.6, lg: isHovered ? 0.6 : 0 },
               transition: theme.transitions.create(["opacity"], {
                 duration: theme.transitions.duration.standard,
                 easing: theme.transitions.easing.easeOut,
@@ -56,7 +56,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
           </Typography>
 
           <Typography
-            variant="h6"
+            variant="body1"
             sx={(theme) => ({
               opacity: { xs: 1, lg: isHovered ? 1 : 0 },
               transition: theme.transitions.create(["opacity"], {
@@ -69,28 +69,17 @@ export function ServiceCard({ service }: ServiceCardProps) {
           </Typography>
         </Stack>
 
-        <Stack
+        <ArrowForwardIcon
+          fontSize="large"
           sx={(theme) => ({
-            width: isHovered ? "100%" : theme.spacing(3),
-            alignItems: "flex-end",
-            transition: theme.transitions.create(["width"], {
+            opacity: 0.6,
+            transform: `rotate(${isHovered ? 0 : -45}deg)`,
+            transition: theme.transitions.create("transform", {
               duration: theme.transitions.duration.standard,
               easing: theme.transitions.easing.easeOut,
             }),
           })}
-        >
-          <ArrowForwardIcon
-            fontSize="medium"
-            sx={(theme) => ({
-              color: isHovered ? "primary.contrastText" : "text.secondary",
-              opacity: 0.6,
-              transition: theme.transitions.create("color", {
-                duration: theme.transitions.duration.standard,
-                easing: theme.transitions.easing.easeOut,
-              }),
-            })}
-          />
-        </Stack>
+        />
       </Stack>
     </Card>
   );
