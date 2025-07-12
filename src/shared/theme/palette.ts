@@ -6,70 +6,72 @@ export const palette: ThemeOptions["palette"] = {
   mode: "dark",
 
   primary: {
-    main: "#C69BFF",
-    dark: "#B088E8",
-    light: "#d6b9fc",
-    contrastText: "#0B0C0F",
+    main: "#0b5cff",
+    dark: "#004bee",
+    light: "#7ea7f8",
+    contrastText: "#ffffff",
   },
 
   secondary: {
-    main: "#353945",
-    dark: "#0B0C0F",
-    light: "#777E90",
+    main: "#1c1f1f",
+    dark: "#141616",
+    light: "#becfcf",
     contrastText: "#ffffff",
   },
 
   text: {
-    primary: "#ffffff",
-    secondary: "#B1B5C3",
-    disabled: "#777E90",
+    primary: "#ffffff", // БЕЛЫЙ текст
+    secondary: "#becfcf", // светло-серый
+    disabled: "#7e8888",
   },
 
   background: {
-    default: "#0B0C0F",
-    paper: "#1c1f1f",
+    default: "#000000", // ТЕМНЫЙ фон
+    paper: "#1a1a1a", // еще темнее для карточек
   },
 
   success: {
-    main: "#00D68F",
-    contrastText: "#0B0C0F",
+    main: "#d6ff79",
+    dark: "#b8e358",
+    light: "#d6ff79",
+    contrastText: "#1c1f1f",
   },
 
   warning: {
-    main: "#FFA726",
-    contrastText: "#0B0C0F",
+    main: "#ffa726",
+    contrastText: "#ffffff",
   },
 
   error: {
-    main: "#ff3b18",
+    main: "#0b5cff",
     contrastText: "#ffffff",
   },
 
   info: {
-    main: "#C69BFF",
-    contrastText: "#0B0C0F",
+    main: "#7ea7f8",
+    contrastText: "#ffffff",
   },
 
   grey: {
-    50: "#F4F5F6",
-    100: "#E6E8EC",
-    200: "#B1B5C3",
-    300: "#777E90",
-    400: "#353945",
-    500: "#353945",
-    600: "#0B0C0F",
-    700: "#0B0C0F",
-    800: "#0B0C0F",
-    900: "#0B0C0F",
+    50: "#fdfdfd",
+    100: "#f2f6f6",
+    200: "#dee7e7",
+    300: "#e3e8e8",
+    400: "#becfcf",
+    500: "#7e8888",
+    600: "#606262",
+    700: "#3e3e3e",
+    800: "#1c1f1f",
+    900: "#262929",
   },
 
-  divider: "#353945",
+  divider: "#3e3e3e",
 
   action: {
-    hover: "rgba(198, 155, 255, 0.08)",
-    selected: "rgba(198, 155, 255, 0.12)",
-    disabled: "rgba(177, 181, 195, 0.26)",
-    disabledBackground: "rgba(177, 181, 195, 0.12)",
-    focus: "rgba(198, 155, 255, 0.12)",
+    hover: "rgba(11, 92, 255, 0.08)",
+    selected: "rgba(11, 92, 255, 0.12)",
+    disabled: "rgba(190, 207, 207, 0.26)",
+    disabledBackground: "rgba(190, 207, 207, 0.12)",
+    focus: "rgba(11, 92, 255, 0.12)",
   },
 };
