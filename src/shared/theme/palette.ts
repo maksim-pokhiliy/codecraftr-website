@@ -20,14 +20,14 @@ export const palette: ThemeOptions["palette"] = {
   },
 
   text: {
-    primary: "#ffffff", // БЕЛЫЙ текст
-    secondary: "#becfcf", // светло-серый
+    primary: "#ffffff",
+    secondary: "#becfcf",
     disabled: "#7e8888",
   },
 
   background: {
-    default: "#000000", // ТЕМНЫЙ фон
-    paper: "#1a1a1a", // еще темнее для карточек
+    default: "#000000",
+    paper: "#1a1a1a",
   },
 
   success: {

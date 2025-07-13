@@ -3,7 +3,31 @@
 import { Container, ContainerProps, Stack, StackProps, Typography } from "@mui/material";
 import { ReactNode } from "react";
 
-type SectionVariant = "default" | "paper";
+const getBackgroundColor = (variant: SectionVariant) => {
+  switch (variant) {
+    case "light":
+      return "grey.50";
+    case "primary":
+      return "primary.main";
+    case "dark":
+    default:
+      return "background.default";
+  }
+};
+
+const getTextColor = (variant: SectionVariant) => {
+  switch (variant) {
+    case "light":
+      return "background.default";
+    case "primary":
+      return "primary.contrastText";
+    case "dark":
+    default:
+      return "text.primary";
+  }
+};
+
+type SectionVariant = "dark" | "light" | "primary";
 
 interface SectionProps extends Omit<StackProps, "children" | "maxWidth"> {
   children: ReactNode;
@@ -17,18 +41,17 @@ export function Section({
   children,
   title,
   highlighted,
-  variant = "default",
+  variant = "dark",
   maxWidth = "xl",
   ...stackProps
 }: SectionProps) {
-  const bgcolor = variant === "paper" ? "background.paper" : "background.default";
-
   return (
     <Stack
       component="section"
       sx={{
         py: { xs: 4, md: 8 },
-        bgcolor,
+        bgcolor: getBackgroundColor(variant),
+        color: getTextColor(variant),
       }}
       {...stackProps}
     >
@@ -38,7 +61,11 @@ export function Section({
             <Typography variant="h1">
               {title}
               {highlighted && (
-                <Typography component="span" variant="h1" color="primary">
+                <Typography
+                  component="span"
+                  variant="h1"
+                  color={variant === "primary" ? "primary.contrastText" : "primary.main"}
+                >
                   {" "}
                   {highlighted}
                 </Typography>
