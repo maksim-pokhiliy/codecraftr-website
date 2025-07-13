@@ -9,7 +9,7 @@ export const tab: Components<Theme>["MuiTab"] = {
       padding: theme.spacing(2, 4),
       borderBottom: `4px solid ${theme.palette.secondary.main}`,
       transition: theme.transitions.create(["color", "background-color"], {
-        duration: theme.transitions.duration.shortest,
+        duration: theme.transitions.duration.standard,
         easing: theme.transitions.easing.easeOut,
       }),
 

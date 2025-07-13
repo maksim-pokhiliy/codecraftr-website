@@ -25,14 +25,6 @@ const services = [
     href: "/services/travel-saas",
   },
   {
-    id: 3,
-    title: "Platform Modernization",
-    subtitle: "Scale growth",
-    description:
-      "Modernize existing SaaS platforms with scalable architecture and performance optimization.",
-    href: "/services/modernization",
-  },
-  {
     id: 4,
     title: "All Services of Our Agency",
     subtitle: "Find opportunities",
@@ -47,7 +39,12 @@ export function HeroSection() {
     <FullscreenSection>
       <Stack spacing={8}>
         <Stack>
-          <Typography variant="overline" color="primary">
+          <Typography
+            variant="overline"
+            sx={{
+              color: "primary",
+            }}
+          >
             SaaS development agency
           </Typography>
 
@@ -83,7 +80,7 @@ export function HeroSection() {
           {services.map((service) => (
             <Grid
               key={service.id}
-              size={{ xs: 12, sm: 6, xl: 3 }}
+              size={{ xs: 12, sm: 4 }}
               sx={{
                 alignItems: "stretch",
                 display: "flex",

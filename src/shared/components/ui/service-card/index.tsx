@@ -48,9 +48,9 @@ export function ServiceCard({ service }: ServiceCardProps) {
               opacity: { xs: 0.6, lg: isHovered ? 0.6 : 0 },
               transform: `translateY(${isHovered ? 0 : 4}px)`,
               transition: theme.transitions.create(["opacity", "transform"], {
-                duration: theme.transitions.duration.shortest,
+                duration: theme.transitions.duration.standard,
                 easing: theme.transitions.easing.easeOut,
-                delay: theme.transitions.duration.shortest,
+                delay: theme.transitions.duration.standard,
               }),
             })}
           >
@@ -63,9 +63,9 @@ export function ServiceCard({ service }: ServiceCardProps) {
               opacity: { xs: 1, lg: isHovered ? 1 : 0 },
               transform: `translateY(${isHovered ? 0 : 4}px)`,
               transition: theme.transitions.create(["opacity", "transform"], {
-                duration: theme.transitions.duration.shortest,
+                duration: theme.transitions.duration.standard,
                 easing: theme.transitions.easing.easeOut,
-                delay: theme.transitions.duration.shortest * 2,
+                delay: theme.transitions.duration.standard * 2,
               }),
             })}
           >
@@ -79,7 +79,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
             opacity: 0.6,
             transform: `rotate(${isHovered ? 0 : -45}deg)`,
             transition: theme.transitions.create("transform", {
-              duration: theme.transitions.duration.shortest,
+              duration: theme.transitions.duration.standard,
               easing: theme.transitions.easing.easeOut,
             }),
           })}
