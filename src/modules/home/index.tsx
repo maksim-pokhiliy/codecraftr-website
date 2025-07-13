@@ -1,6 +1,7 @@
 "use client";
 
 import { AdvantagesSection } from "./components/advantages-section";
+import { FaqSection } from "./components/faq-section";
 import { HeroSection } from "./components/hero-section";
 import { ProcessSection } from "./components/process-section";
 import { ServicesSection } from "./components/services-section";
@@ -14,6 +15,7 @@ export function HomePage() {
       <ProcessSection />
       <AdvantagesSection />
       <ServicesSection />
+      <FaqSection />
     </>
   );
 }

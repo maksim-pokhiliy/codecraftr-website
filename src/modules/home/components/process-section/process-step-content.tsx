@@ -22,12 +22,22 @@ export function ProcessStepContent({ step }: ProcessStepContentProps) {
           {step.title}
         </Typography>
 
-        <Typography variant="overline" color="primary">
+        <Typography
+          variant="overline"
+          sx={{
+            color: "primary",
+          }}
+        >
           {step.duration}
         </Typography>
       </Stack>
 
-      <Typography variant="body1" color="text.secondary">
+      <Typography
+        variant="body1"
+        sx={{
+          color: "text.secondary",
+        }}
+      >
         {step.description}
       </Typography>
 
