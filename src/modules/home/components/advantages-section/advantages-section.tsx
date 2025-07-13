@@ -67,7 +67,12 @@ export function AdvantagesSection() {
                   {advantage.title}
                 </Typography>
 
-                <Typography variant="body1" color="text.secondary">
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: "text.secondary",
+                  }}
+                >
                   {advantage.description}
                 </Typography>
               </Stack>
