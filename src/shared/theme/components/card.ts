@@ -13,7 +13,12 @@ export const card: Components<Theme>["MuiCard"] = {
   styleOverrides: {
     root: ({ theme }) => ({
       boxShadow: "none",
-      padding: theme.spacing(4),
+      padding: theme.spacing(2),
+      borderRadius: 0,
+
+      [theme.breakpoints.up("sm")]: {
+        padding: theme.spacing(4),
+      },
     }),
   },
   variants: [
