@@ -3,11 +3,11 @@
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { Card, Stack, Typography } from "@mui/material";
 import Link from "next/link";
-import { JSX, useState } from "react";
+import { useState } from "react";
 
 interface Service {
   id: number;
-  title: JSX.Element;
+  title: string;
   subtitle: string;
   description: string;
   href: string;
@@ -81,7 +81,6 @@ export function ServiceCard({ service }: ServiceCardProps) {
             transition: theme.transitions.create("transform", {
               duration: theme.transitions.duration.shortest,
               easing: theme.transitions.easing.easeOut,
-              delay: theme.transitions.duration.shortest * 3,
             }),
           })}
         />
