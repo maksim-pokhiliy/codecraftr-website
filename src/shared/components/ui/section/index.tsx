@@ -6,7 +6,7 @@ import { ReactNode } from "react";
 const getBackgroundColor = (variant: SectionVariant) => {
   switch (variant) {
     case "light":
-      return "grey.50";
+      return "grey.100";
     case "primary":
       return "primary.main";
     case "dark":
