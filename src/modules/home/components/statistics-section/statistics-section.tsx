@@ -30,7 +30,7 @@ const statistics: Statistic[] = [
 
 export function StatisticsSection() {
   return (
-    <Section title="Codecraftr by the" highlighted="numbers." variant="paper">
+    <Section title="Codecraftr by the" highlighted="numbers." variant="light">
       <Grid container spacing={{ xs: 4, md: 0 }}>
         {statistics.map((stat, index) => (
           <Grid key={index} size={{ xs: 12, sm: 6, md: 12 / statistics.length }}>
@@ -46,9 +46,7 @@ export function StatisticsSection() {
                 {stat.value}
               </Typography>
 
-              <Typography variant="body1" component="span">
-                {stat.label}
-              </Typography>
+              <Typography variant="body1">{stat.label}</Typography>
             </Stack>
           </Grid>
         ))}
