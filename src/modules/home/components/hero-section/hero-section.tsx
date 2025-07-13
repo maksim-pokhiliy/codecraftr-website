@@ -5,18 +5,12 @@ import { TypeAnimation } from "react-type-animation";
 
 import { FullscreenSection } from "@app/shared/components/ui/fullscreen-section";
 
-import { ServiceCard } from "./service-card";
+import { ServiceCard } from "../../../../shared/components/ui/service-card";
 
 const services = [
   {
     id: 1,
-    title: (
-      <>
-        SaaS MVP
-        <br />
-        Development
-      </>
-    ),
+    title: "SaaS MVP Development",
     subtitle: "Validate ideas",
     description:
       "Transform your SaaS concept into a scalable platform that attracts investors and early customers.",
@@ -24,13 +18,7 @@ const services = [
   },
   {
     id: 2,
-    title: (
-      <>
-        Travel SaaS
-        <br />
-        Platform
-      </>
-    ),
+    title: "Travel SaaS Platform",
     subtitle: "Drive bookings",
     description:
       "Build booking platforms with travel-specific workflows and real-time availability systems.",
@@ -38,13 +26,7 @@ const services = [
   },
   {
     id: 3,
-    title: (
-      <>
-        Platform
-        <br />
-        Modernization
-      </>
-    ),
+    title: "Platform Modernization",
     subtitle: "Scale growth",
     description:
       "Modernize existing SaaS platforms with scalable architecture and performance optimization.",
@@ -52,13 +34,7 @@ const services = [
   },
   {
     id: 4,
-    title: (
-      <>
-        All Services of
-        <br />
-        Our Agency
-      </>
-    ),
+    title: "All Services of Our Agency",
     subtitle: "Find opportunities",
     description:
       "Explore our comprehensive suite of SaaS development services and technical expertise.",

@@ -8,7 +8,6 @@ export const tab: Components<Theme>["MuiTab"] = {
       ...theme.typography.h5,
       padding: theme.spacing(2, 4),
       borderBottom: `4px solid ${theme.palette.secondary.main}`,
-      width: "100%",
       transition: theme.transitions.create(["color", "background-color"], {
         duration: theme.transitions.duration.shortest,
         easing: theme.transitions.easing.easeOut,
@@ -16,6 +15,10 @@ export const tab: Components<Theme>["MuiTab"] = {
 
       "&:hover": {
         backgroundColor: theme.palette.action.hover,
+      },
+
+      [theme.breakpoints.up("sm")]: {
+        width: "100%",
       },
     }),
   },
