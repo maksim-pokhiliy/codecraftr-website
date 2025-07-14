@@ -16,6 +16,11 @@ export const card: Components<Theme>["MuiCard"] = {
       padding: theme.spacing(2),
       borderRadius: 0,
 
+      transition: theme.transitions.create(["background-color"], {
+        duration: theme.transitions.duration.standard,
+        easing: theme.transitions.easing.easeOut,
+      }),
+
       [theme.breakpoints.up("sm")]: {
         padding: theme.spacing(4),
       },
