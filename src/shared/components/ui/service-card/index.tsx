@@ -26,16 +26,12 @@ export function ServiceCard({ service }: ServiceCardProps) {
       href={service.href}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      sx={(theme) => ({
+      sx={{
         padding: 3,
         bgcolor: isHovered ? "primary.main" : "background.paper",
         textDecoration: "none",
         flex: 1,
-        transition: theme.transitions.create(["background-color"], {
-          duration: theme.transitions.duration.short,
-          easing: theme.transitions.easing.easeOut,
-        }),
-      })}
+      }}
     >
       <Stack spacing={2} sx={{ height: "100%", justifyContent: "space-between" }}>
         <Stack spacing={1}>

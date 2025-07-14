@@ -11,7 +11,7 @@ import { TabPanel } from "./tab-panel";
 const processSteps: ProcessStep[] = [
   {
     id: "discovery",
-    title: "Discovery session",
+    title: "Discovery",
     duration: "1-2 weeks",
     description:
       "The discovery session is the first and foremost stage of SaaS development. We collect information about your business model, target audience, core functionality, and technical requirements. We identify potential bottlenecks and offer suitable solutions to overcome them. This way, we deliver SaaS platforms that meet market demand and provide precise time and cost estimates.",
@@ -84,7 +84,7 @@ export function ProcessSection() {
 
   return (
     <Section title="Our SaaS development" highlighted="process.">
-      <Tabs value={value} onChange={handleChange} variant="scrollable" scrollButtons="auto">
+      <Tabs value={value} onChange={handleChange}>
         {processSteps.map((step) => (
           <Tab key={step.id} label={step.title} />
         ))}

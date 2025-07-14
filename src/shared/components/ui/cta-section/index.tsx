@@ -1,7 +1,6 @@
 "use client";
 
-import { CalendarMonth } from "@mui/icons-material";
-import { Button, Stack, Typography } from "@mui/material";
+import { Button, Stack, Typography, useMediaQuery } from "@mui/material";
 
 import { Section } from "@app/shared/components/ui/section";
 
@@ -19,6 +18,8 @@ export function CtaSection({
   description = "Let's discuss your project in a 30-minute discovery call",
   buttonText = "Schedule Discovery Call",
 }: CtaSectionProps) {
+  const isMobile = useMediaQuery((theme) => theme.breakpoints.down("sm"));
+
   const handleClick = () => {
     // Calendly integration coming soon...
   };
@@ -32,9 +33,9 @@ export function CtaSection({
           variant="contained"
           size="large"
           color="success"
-          startIcon={<CalendarMonth />}
           onClick={handleClick}
           sx={{ mt: 8 }}
+          fullWidth={isMobile}
         >
           {buttonText}
         </Button>

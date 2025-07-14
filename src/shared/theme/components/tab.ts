@@ -3,6 +3,9 @@
 import { Components, Theme } from "@mui/material";
 
 export const tab: Components<Theme>["MuiTab"] = {
+  defaultProps: {
+    disableRipple: true,
+  },
   styleOverrides: {
     root: ({ theme }) => ({
       ...theme.typography.h5,
@@ -15,10 +18,6 @@ export const tab: Components<Theme>["MuiTab"] = {
 
       "&:hover": {
         backgroundColor: theme.palette.action.hover,
-      },
-
-      [theme.breakpoints.up("sm")]: {
-        width: "100%",
       },
     }),
   },
