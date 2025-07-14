@@ -1,6 +1,13 @@
 "use client";
 
-import { Accordion, AccordionDetails, AccordionSummary, Stack, Typography } from "@mui/material";
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Divider,
+  Stack,
+  Typography,
+} from "@mui/material";
 
 import { Section } from "@app/shared/components/ui/section";
 
@@ -52,7 +59,7 @@ const faqs: FAQ[] = [
 export function FaqSection() {
   return (
     <Section title="Frequently asked" highlighted="questions." variant="light">
-      <Stack spacing={0}>
+      <Stack divider={<Divider />}>
         {faqs.map((faq) => (
           <Accordion key={faq.id} variant="light" square>
             <AccordionSummary>
@@ -62,7 +69,7 @@ export function FaqSection() {
             </AccordionSummary>
 
             <AccordionDetails>
-              <Typography variant="body2" sx={{ fontWeight: 100, maxWidth: 800 }}>
+              <Typography variant="body1" sx={{ maxWidth: 800, fontWeight: 100 }}>
                 {faq.answer}
               </Typography>
             </AccordionDetails>

@@ -43,7 +43,7 @@ export function ProcessStepContent({ step }: ProcessStepContentProps) {
 
       <Stack
         direction="row"
-        spacing={2}
+        gap={{ xs: 1, sm: 2 }}
         sx={{
           flexWrap: "wrap",
         }}

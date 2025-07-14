@@ -1,10 +1,8 @@
 "use client";
 
-import { Grid, Stack, Typography } from "@mui/material";
-import { TypeAnimation } from "react-type-animation";
+import { Grid } from "@mui/material";
 
-import { FullscreenSection } from "@app/shared/components/ui/fullscreen-section";
-
+import { PageHero } from "../../../../shared/components/ui/page-hero";
 import { ServiceCard } from "../../../../shared/components/ui/service-card";
 
 const services = [
@@ -36,46 +34,17 @@ const services = [
 
 export function HeroSection() {
   return (
-    <FullscreenSection>
-      <Stack spacing={8}>
-        <Stack>
-          <Typography
-            variant="overline"
-            sx={{
-              color: "primary",
-            }}
-          >
-            SaaS development agency
-          </Typography>
-
-          <Typography variant="h2" component="h1">
-            Strong partner for building scalable SaaS platforms with
-            <br />
-            enterprise-ready{" "}
-            <Typography
-              component="span"
-              variant="h2"
-              sx={{ color: "primary.main", fontWeight: 700 }}
-            >
-              <TypeAnimation
-                sequence={[
-                  "architecture.",
-                  2000,
-                  "solutions.",
-                  2000,
-                  "expertise.",
-                  2000,
-                  "results.",
-                  2000,
-                ]}
-                wrapper="span"
-                speed={50}
-                repeat={Infinity}
-              />
-            </Typography>
-          </Typography>
-        </Stack>
-
+    <PageHero
+      overline="SaaS development agency"
+      animatedWords={["solutions.", "expertise.", "results."]}
+      title={
+        <>
+          Strong partner for building scalable SaaS platforms with
+          <br />
+          enterprise-ready{" "}
+        </>
+      }
+      actions={
         <Grid container spacing={4}>
           {services.map((service) => (
             <Grid
@@ -90,7 +59,7 @@ export function HeroSection() {
             </Grid>
           ))}
         </Grid>
-      </Stack>
-    </FullscreenSection>
+      }
+    />
   );
 }
