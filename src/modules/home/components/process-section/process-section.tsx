@@ -1,12 +1,7 @@
 "use client";
 
-import { Tab, Tabs } from "@mui/material";
-import { useState } from "react";
-
-import { Section } from "@app/shared/components/ui/section";
-
-import { ProcessStepContent } from "./process-step-content";
-import { TabPanel } from "./tab-panel";
+import { ProcessStep, ProcessStepContent } from "@app/shared/components/ui/process-step-content";
+import { TabbedSection, TabItem } from "@app/shared/components/ui/tabbed-section";
 
 const processSteps: ProcessStep[] = [
   {
@@ -67,34 +62,12 @@ const processSteps: ProcessStep[] = [
   },
 ];
 
-interface ProcessStep {
-  id: string;
-  title: string;
-  duration: string;
-  description: string;
-  deliverables: string[];
-}
-
 export function ProcessSection() {
-  const [value, setValue] = useState(0);
+  const tabs: TabItem[] = processSteps.map((step) => ({
+    id: step.id,
+    label: step.title,
+    content: <ProcessStepContent step={step} />,
+  }));
 
-  const handleChange = (_: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
-  };
-
-  return (
-    <Section title="Our SaaS development" highlighted="process.">
-      <Tabs value={value} onChange={handleChange}>
-        {processSteps.map((step) => (
-          <Tab key={step.id} label={step.title} />
-        ))}
-      </Tabs>
-
-      {processSteps.map((step, index) => (
-        <TabPanel key={step.id} value={value} index={index}>
-          <ProcessStepContent step={step} />
-        </TabPanel>
-      ))}
-    </Section>
-  );
+  return <TabbedSection title="Our SaaS development" highlighted="process." tabs={tabs} />;
 }

@@ -2,6 +2,7 @@
 
 import { PageHero } from "@app/shared/components/ui/page-hero";
 
+import { ProcessSection } from "./components/process-section";
 import { ServicesSection } from "./components/services-section";
 import { SolutionsSection } from "./components/solutions-section";
 import { TechStackSection } from "./components/tech-stack-section";
@@ -17,6 +18,7 @@ export function ServicesPage() {
       />
 
       <ServicesSection />
+      <ProcessSection />
       <SolutionsSection />
       <TechStackSection />
     </>
