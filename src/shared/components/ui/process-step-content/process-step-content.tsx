@@ -2,7 +2,7 @@
 
 import { Chip, Stack, Typography } from "@mui/material";
 
-interface ProcessStep {
+export interface ProcessStep {
   id: string;
   title: string;
   duration: string;
