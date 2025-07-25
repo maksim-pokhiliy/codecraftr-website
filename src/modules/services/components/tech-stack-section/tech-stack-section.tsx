@@ -109,7 +109,7 @@ function TechCategory({ title, technologies }: TechCategoryProps) {
             spacing={1}
             sx={(theme) => ({
               alignItems: "center",
-              bgcolor: theme.palette.grey[200],
+              bgcolor: theme.palette.background.paper,
               p: theme.spacing(1, 2),
               color: "inherit",
               textDecoration: "none",
@@ -119,7 +119,7 @@ function TechCategory({ title, technologies }: TechCategoryProps) {
               }),
 
               "&:hover": {
-                bgcolor: theme.palette.grey[400],
+                bgcolor: theme.palette.grey[700],
               },
             })}
           >
@@ -135,7 +135,7 @@ function TechCategory({ title, technologies }: TechCategoryProps) {
 
 export function TechStackSection() {
   return (
-    <Section title="Technology" highlighted="stack." variant="light">
+    <Section title="Technology" highlighted="stack." variant="dark">
       <Grid container spacing={4}>
         {techCategories.map((category) => (
           <Grid key={category.title} size={{ xs: 12, sm: 6, md: 4 }}>

@@ -62,7 +62,7 @@ interface SolutionCardProps {
 
 function SolutionCard({ solution }: SolutionCardProps) {
   return (
-    <Card variant="light">
+    <Card variant="dark">
       <Stack spacing={2}>
         <Typography variant="h2">{solution.icon}</Typography>
 
@@ -83,7 +83,7 @@ function SolutionCard({ solution }: SolutionCardProps) {
 
 export function SolutionsSection() {
   return (
-    <Section title="Solutions we" highlighted="build." variant="dark">
+    <Section title="Solutions we" highlighted="build." variant="light">
       <Grid container spacing={4}>
         {solutions.map((solution) => (
           <Grid key={solution.id} size={{ xs: 12, sm: 6, lg: 4 }} sx={{ display: "flex" }}>
