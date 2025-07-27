@@ -5,16 +5,15 @@ import { Components, Theme } from "@mui/material";
 export const button: Components<Theme>["MuiButton"] = {
   defaultProps: {
     disableElevation: true,
-    disableRipple: true,
   },
 
   styleOverrides: {
-    containedSizeLarge: ({ theme }) => ({
-      padding: theme.spacing(2, 4),
+    sizeLarge: ({ theme }) => ({
+      padding: theme.spacing(3, 6),
       ...theme.typography.h6,
 
       [theme.breakpoints.up("sm")]: {
-        ...theme.typography.h5,
+        ...theme.typography.h4,
       },
     }),
 
