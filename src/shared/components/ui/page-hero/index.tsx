@@ -3,7 +3,6 @@
 import { Button, ButtonProps, Stack, Typography, useMediaQuery } from "@mui/material";
 import Link from "next/link";
 import { ReactNode } from "react";
-import { TypeAnimation } from "react-type-animation";
 
 import { FullscreenSection } from "@app/shared/components/ui/fullscreen-section";
 
@@ -18,7 +17,6 @@ interface ButtonConfig {
 interface PageHeroProps {
   overline?: string;
   title: string | ReactNode;
-  animatedWords?: string[];
   highlightedText?: string;
   description?: string;
   actions?: ReactNode;
@@ -29,7 +27,6 @@ interface PageHeroProps {
 export function PageHero({
   overline,
   title,
-  animatedWords,
   highlightedText,
   description,
   actions,
@@ -67,7 +64,7 @@ export function PageHero({
 
     if (primaryButton ?? secondaryButton) {
       return (
-        <Stack direction={{ sm: "row" }} spacing={{ xs: 2, sm: 4 }}>
+        <Stack direction={{ lg: "row" }} spacing={{ xs: 2, sm: 4 }}>
           {primaryButton && renderButton(primaryButton, true)}
           {secondaryButton && renderButton(secondaryButton, false)}
         </Stack>
@@ -80,7 +77,7 @@ export function PageHero({
   return (
     <FullscreenSection>
       <Stack spacing={8}>
-        <Stack spacing={2}>
+        <Stack spacing={2} sx={{ maxWidth: { xs: "unset", sm: "80%" } }}>
           {overline && (
             <Typography
               variant="body1"
@@ -96,23 +93,6 @@ export function PageHero({
 
           <Typography variant={isMobile ? "h2" : "h1"} component="h1">
             {title}
-            {animatedWords && (
-              <>
-                <Typography
-                  component="span"
-                  variant={isMobile ? "h2" : "h1"}
-                  sx={{ color: "primary.main" }}
-                >
-                  {" "}
-                  <TypeAnimation
-                    sequence={animatedWords.flatMap((word) => [word, 2000])}
-                    wrapper="span"
-                    speed={50}
-                    repeat={Infinity}
-                  />
-                </Typography>
-              </>
-            )}
 
             {highlightedText && (
               <>
@@ -133,8 +113,8 @@ export function PageHero({
               variant="h6"
               sx={{
                 color: "text.secondary",
-                maxWidth: 800,
-                fontWeight: 300,
+                fontWeight: 400,
+                maxWidth: { xs: "unset", sm: "80%" },
               }}
             >
               {description}

@@ -3,23 +3,31 @@
 import { Components, Theme } from "@mui/material";
 
 export const accordion: Components<Theme>["MuiAccordion"] = {
+  defaultProps: {
+    disableGutters: true,
+    elevation: 0,
+  },
   styleOverrides: {
-    root: {
+    root: ({ theme }) => ({
+      color: theme.palette.common.black,
+      backgroundColor: theme.palette.grey[100],
+      padding: theme.spacing(2, 4),
+      borderRadius: "0 !important",
+
+      transition: theme.transitions.create(["background-color", "color", "padding"], {
+        easing: theme.transitions.easing.easeInOut,
+        duration: theme.transitions.duration.standard,
+      }),
+
       "&::before": {
-        display: "none",
+        height: 2,
+        backgroundColor: theme.palette.grey[200],
       },
 
       "&.Mui-expanded": {
-        margin: 0,
+        color: theme.palette.text.primary,
+        backgroundColor: theme.palette.primary.main,
       },
-    },
+    }),
   },
-  variants: [
-    {
-      props: { variant: "light" },
-      style: {
-        backgroundColor: "transparent",
-      },
-    },
-  ],
 };

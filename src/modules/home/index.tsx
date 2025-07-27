@@ -1,12 +1,9 @@
 "use client";
 
-import { CtaSection } from "@app/shared/components/ui/cta-section";
-
-import { AdvantagesSection } from "./components/advantages-section";
-import { FaqSection } from "./components/faq-section";
 import { HeroSection } from "./components/hero-section";
-import { ProcessSection } from "./components/process-section";
-import { ServicesSection } from "./components/services-section";
+import { OurApproachSection } from "./components/our-approach-section";
+import { ProjectsSection } from "./components/projects-section";
+import { SaasExpertiseSection } from "./components/saas-expertise-section";
 import { StatisticsSection } from "./components/statistics-section";
 
 export function HomePage() {
@@ -14,11 +11,9 @@ export function HomePage() {
     <>
       <HeroSection />
       <StatisticsSection />
-      <ProcessSection />
-      <AdvantagesSection />
-      <ServicesSection />
-      <FaqSection />
-      <CtaSection />
+      <SaasExpertiseSection />
+      <OurApproachSection />
+      <ProjectsSection />
     </>
   );
 }

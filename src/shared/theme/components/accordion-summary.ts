@@ -10,25 +10,25 @@ export const accordionSummary: Components<Theme>["MuiAccordionSummary"] = {
       fontSize: "large",
     }),
   },
+
   styleOverrides: {
     root: ({ theme }) => ({
-      padding: 0,
+      padding: theme.spacing(2),
+      ...theme.typography.h4,
 
-      transition: theme.transitions.create("color", {
-        easing: theme.transitions.easing.easeOut,
+      transition: theme.transitions.create(["color", "padding", "font-size", "font-weight"], {
+        easing: theme.transitions.easing.easeInOut,
         duration: theme.transitions.duration.standard,
       }),
-
-      "&:hover": {
-        color: theme.palette.primary.main,
-      },
-
-      "&.Mui-expanded": {
-        color: theme.palette.primary.main,
-      },
     }),
-    expandIconWrapper: {
+
+    expandIconWrapper: ({ theme }) => ({
       color: "inherit",
-    },
+
+      transition: theme.transitions.create(["transform"], {
+        easing: theme.transitions.easing.easeInOut,
+        duration: theme.transitions.duration.standard,
+      }),
+    }),
   },
 };
