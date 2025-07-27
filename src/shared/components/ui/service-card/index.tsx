@@ -1,7 +1,7 @@
 "use client";
 
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { Card, Stack, Typography } from "@mui/material";
+import { Card, CardProps, Stack, Typography } from "@mui/material";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -15,9 +15,10 @@ interface Service {
 
 interface ServiceCardProps {
   service: Service;
+  variant?: CardProps["variant"];
 }
 
-export function ServiceCard({ service }: ServiceCardProps) {
+export function ServiceCard({ service, variant = "dark" }: ServiceCardProps) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -26,11 +27,17 @@ export function ServiceCard({ service }: ServiceCardProps) {
       href={service.href}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      variant={variant}
       sx={{
         padding: 3,
-        bgcolor: isHovered ? "primary.main" : "background.paper",
+        // bgcolor: isHovered ? "primary.main" : "background.paper",
         textDecoration: "none",
         flex: 1,
+
+        "&:hover": {
+          bgcolor: "primary.main",
+          color: "text.primary",
+        },
       }}
     >
       <Stack spacing={2} sx={{ height: "100%", justifyContent: "space-between" }}>
