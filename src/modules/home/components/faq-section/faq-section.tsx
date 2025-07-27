@@ -69,7 +69,7 @@ export function FaqSection() {
             </AccordionSummary>
 
             <AccordionDetails>
-              <Typography variant="body1" sx={{ maxWidth: 800, fontWeight: 100 }}>
+              <Typography variant="body1" sx={{ maxWidth: 800 }}>
                 {faq.answer}
               </Typography>
             </AccordionDetails>
