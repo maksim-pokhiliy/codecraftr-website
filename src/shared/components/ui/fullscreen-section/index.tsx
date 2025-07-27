@@ -1,18 +1,13 @@
 "use client";
 
-import { Container, ContainerProps, Stack, StackProps } from "@mui/material";
+import { Container, Stack, StackProps } from "@mui/material";
 import { ReactNode } from "react";
 
 interface FullscreenSectionProps extends Omit<StackProps, "children" | "maxWidth"> {
   children: ReactNode;
-  maxWidth?: ContainerProps["maxWidth"];
 }
 
-export function FullscreenSection({
-  children,
-  maxWidth = "xl",
-  ...stackProps
-}: FullscreenSectionProps) {
+export function FullscreenSection({ children, ...stackProps }: FullscreenSectionProps) {
   return (
     <Stack
       component="section"
@@ -23,7 +18,9 @@ export function FullscreenSection({
       }}
       {...stackProps}
     >
-      <Container maxWidth={maxWidth}>{children}</Container>
+      <Container maxWidth={false} sx={{ px: { xs: 4, sm: 8 } }}>
+        {children}
+      </Container>
     </Stack>
   );
 }

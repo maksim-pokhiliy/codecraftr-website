@@ -5,15 +5,15 @@ import { Components, Theme } from "@mui/material";
 export const typography: Components<Theme>["MuiTypography"] = {
   styleOverrides: {
     h1: ({ theme }) => ({
-      fontSize: theme.spacing(7),
+      fontSize: theme.spacing(6),
       [theme.breakpoints.up("sm")]: {
-        fontSize: theme.spacing(9),
+        fontSize: theme.spacing(8),
       },
       [theme.breakpoints.up("md")]: {
-        fontSize: theme.spacing(11),
+        fontSize: theme.spacing(10),
       },
       [theme.breakpoints.up("lg")]: {
-        fontSize: theme.spacing(13),
+        fontSize: theme.spacing(12),
       },
     }),
 
@@ -90,7 +90,7 @@ export const typography: Components<Theme>["MuiTypography"] = {
     body1: ({ theme }) => ({
       fontSize: theme.spacing(2),
       [theme.breakpoints.up("md")]: {
-        fontSize: theme.spacing(2.25),
+        fontSize: theme.spacing(2.5),
       },
     }),
 
