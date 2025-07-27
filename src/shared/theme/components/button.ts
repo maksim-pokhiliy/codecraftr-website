@@ -9,7 +9,7 @@ export const button: Components<Theme>["MuiButton"] = {
 
   styleOverrides: {
     sizeLarge: ({ theme }) => ({
-      padding: theme.spacing(3, 6),
+      padding: theme.spacing(2, 4),
       ...theme.typography.h6,
 
       [theme.breakpoints.up("sm")]: {
@@ -22,7 +22,7 @@ export const button: Components<Theme>["MuiButton"] = {
       backgroundColor: theme.palette.common.white,
 
       transition: theme.transitions.create(["color", "background-color"], {
-        easing: theme.transitions.easing.easeOut,
+        easing: theme.transitions.easing.easeInOut,
         duration: theme.transitions.duration.standard,
       }),
 

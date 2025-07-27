@@ -7,34 +7,34 @@ export const typography: ThemeOptions["typography"] = {
     'var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
 
   h1: {
-    fontWeight: 600,
+    fontWeight: 900,
     lineHeight: 1.2,
     letterSpacing: "-0.02em",
   },
 
   h2: {
-    fontWeight: 600,
+    fontWeight: 900,
     lineHeight: 1.3,
     letterSpacing: "-0.01em",
   },
 
   h3: {
-    fontWeight: 600,
+    fontWeight: 900,
     lineHeight: 1.3,
   },
 
   h4: {
-    fontWeight: 600,
+    fontWeight: 900,
     lineHeight: 1.4,
   },
 
   h5: {
-    fontWeight: 600,
+    fontWeight: 900,
     lineHeight: 1.4,
   },
 
   h6: {
-    fontWeight: 600,
+    fontWeight: 900,
     lineHeight: 1.5,
   },
 
@@ -49,12 +49,12 @@ export const typography: ThemeOptions["typography"] = {
   },
 
   body1: {
-    fontWeight: 400,
+    fontWeight: 500,
     lineHeight: 1.6,
   },
 
   body2: {
-    fontWeight: 400,
+    fontWeight: 500,
     lineHeight: 1.5,
   },
 
