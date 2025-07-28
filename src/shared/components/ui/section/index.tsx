@@ -3,7 +3,7 @@
 import { Container, Grid, Typography, useTheme } from "@mui/material";
 import { ReactNode } from "react";
 
-import { parseHighlightedText } from "../../utils/parse-highlighted-text";
+import { parseHighlightedText } from "../../../utils/parse-highlighted-text";
 
 interface SectionProps {
   title?: string;
