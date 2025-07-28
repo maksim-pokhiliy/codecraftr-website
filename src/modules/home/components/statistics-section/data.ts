@@ -1,3 +1,5 @@
+"use client";
+
 import { Statistic } from "./types";
 
 export const statistics: Statistic[] = [

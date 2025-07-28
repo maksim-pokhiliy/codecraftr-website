@@ -1,10 +1,12 @@
+"use client";
+
 export const projects = [
   {
     title: "Siteplus",
     description:
       "No-code website & e-commerce builder used by Web.com, BlueHost, HostGator with drag-and-drop interface.",
     technologies: ["React", "Node.js", "SCSS", "UIKit", "CI/CD"],
-    imageUrl: "/images/portfolio/siteplus.png",
+    imageUrl: "/images/portfolio/siteplus.jpg",
     href: "/projects/siteplus",
   },
   {
@@ -12,7 +14,7 @@ export const projects = [
     description:
       "Talent marketplace connecting remote developers with global companies. Acquired by Randstad Digital in 2024.",
     technologies: ["React", "Node.js", "AWS Amplify", "ExpressJS"],
-    imageUrl: "/images/portfolio/torc.png",
+    imageUrl: "/images/portfolio/torc.jpg",
     href: "/projects/torc",
   },
   {
@@ -20,7 +22,7 @@ export const projects = [
     description:
       "Secure cloud-based access control system for smart buildings with mobile access and real-time monitoring.",
     technologies: ["React Native", "Redux", "MQTT", "Firebase", "Twilio API"],
-    imageUrl: "/images/portfolio/propuskator.png",
+    imageUrl: "/images/portfolio/propuskator.jpg",
     href: "/projects/propuskator",
   },
   {
@@ -28,7 +30,7 @@ export const projects = [
     description:
       "Cloud IoT platform for startups and enterprises to develop, manage, and monitor smart devices remotely.",
     technologies: ["React Native", "Redux", "Firebase", "MQTT", "IoT"],
-    imageUrl: "/images/portfolio/2smart.png",
+    imageUrl: "/images/portfolio/2smart.jpg",
     href: "/projects/2smart-cloud",
   },
   {
@@ -36,7 +38,7 @@ export const projects = [
     description:
       "B2B SaaS platform helping businesses manage their locations across Google Maps, Bing, and Facebook.",
     technologies: ["React", "SCSS", "REST API", "Stripe API", "Google My Business"],
-    imageUrl: "/images/portfolio/getpin.png",
+    imageUrl: "/images/portfolio/getpin.jpg",
     href: "/projects/getpin",
   },
   {
@@ -44,7 +46,7 @@ export const projects = [
     description:
       "High-performance e-commerce platform for Ukrainian special forces unit. Sold 500+ tactical shirts in first month.",
     technologies: ["Next.js", "React", "Firebase", "Tailwind UI", "Telegram API"],
-    imageUrl: "/images/portfolio/utg.png",
+    imageUrl: "/images/portfolio/utg.jpg",
     href: "/projects/utg-store",
   },
 ];
