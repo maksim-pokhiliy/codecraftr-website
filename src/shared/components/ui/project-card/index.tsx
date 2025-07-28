@@ -21,7 +21,7 @@ export function ProjectCard({ description, technologies, imageUrl, href }: Proje
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       sx={{
-        height: 300,
+        height: 500,
       }}
     >
       <Box
@@ -33,8 +33,10 @@ export function ProjectCard({ description, technologies, imageUrl, href }: Proje
           bottom: 0,
           backgroundImage: `url(${imageUrl})`,
           backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           filter: isHovered ? "brightness(1)" : "brightness(0.4)",
+          transform: isHovered ? "scale(1.05)" : "scale(1)",
 
           transition: theme.transitions.create(["filter", "transform"], {
             duration: theme.transitions.duration.standard,
